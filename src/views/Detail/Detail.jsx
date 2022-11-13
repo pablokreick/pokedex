@@ -26,7 +26,7 @@ const Detail = () => {
 	if (!isPower) {
 		return (
 			<>
-				<Main classes="main-dark">
+				<Main type="dark">
 					<Navigate to="/" />
 				</Main>
 				<Pagination />
