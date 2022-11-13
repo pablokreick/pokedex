@@ -3,6 +3,7 @@ import NavBar from "components/layout/NavBar/NavBar";
 import Container from "components/layout/Container/Container";
 import Header from "components/layout/Header/Header";
 import Pokemons from "views/Pokemons/Pokemons";
+import Detail from "views/Detail/Detail";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 				<Header />
 				<Routes>
 					<Route path="/" element={<Pokemons />} />
+					<Route path="/pokemon/:pokemonId" element={<Detail />} />
 					<Route path="/*" element={<Pokemons />} />
 				</Routes>
 				<NavBar />

@@ -1,0 +1,53 @@
+.detail {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+}
+
+.detail__image {
+	width: 100%;
+	height: 400px;
+	align-self: center;
+}
+
+.detail__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	padding-bottom: 3rem;
+}
+
+.detail__information {
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.detail__image {
+		width: 60%;
+		align-self: center;
+	}
+	.detail__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		padding-bottom: 1rem;
+	}
+
+	.detail__information {
+		width: 40%;
+	}
+}
+
+.types__container {
+	display: flex;
+	padding: 0.3rem 0;
+}
+
+.stats__container {
+	width: 100%;
+}
+
+.stat {
+	padding: 0.3rem;
+}

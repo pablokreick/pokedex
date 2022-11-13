@@ -1,0 +1,15 @@
+.progress-bar {
+	width: 100%;
+	height: 1rem;
+	border-radius: 0.5rem;
+	background-color: #fef6cf;
+	background-color: #fff5bb;
+	box-shadow: inset 1px 1px 3px #f7d000;
+}
+
+.progress-bar__quantity {
+	height: 100%;
+	border-radius: 0.5rem;
+	background-color: #f7d000;
+	box-shadow: inset 1px 1px 5px #fff;
+}

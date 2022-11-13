@@ -1,0 +1,16 @@
+.type-badge {
+	width: fit-content;
+	padding: 0.2rem 0.5rem;
+	border-radius: 1rem;
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.type-badge__image {
+	width: 20px;
+	margin-right: 0.3rem;
+}
