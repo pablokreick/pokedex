@@ -8,7 +8,7 @@ const Power = () => {
 	const { isPower } = usePowerContext();
 
 	if (isPower) {
-		return <Navigate to="/pokemons" />;
+		return <Navigate to="/pokemons/1" />;
 	}
 
 	return (

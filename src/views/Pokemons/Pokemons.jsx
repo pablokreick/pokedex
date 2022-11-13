@@ -1,26 +1,32 @@
 import "./pokemons.css";
-import React, { useState } from "react";
+import React from "react";
 import { CircleLoader } from "react-spinners";
 import Main from "components/layout/Main/Main";
 import Pagination from "components/ui/Pagination/Pagination";
 import PokemonCard from "components/ui/PokemonCard/PokemonCard";
 import { usePokemons } from "hooks/usePokemons";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { usePowerContext } from "contexts/PowerContext";
 
+const LIMIT = 8;
+const TOTAL_POKEMONS = 1154;
+
 const Pokemons = () => {
+	const { pageId } = useParams();
 	const { isPower } = usePowerContext();
-	const [page, setPage] = useState(1);
-	const { pokemons, isLoading } = usePokemons(page);
+	const { pokemons, isLoading } = usePokemons(pageId, LIMIT);
+	const navigate = useNavigate();
 
 	const goToPreviousPage = () => {
-		if (page > 1) {
-			setPage(page - 1);
+		if (+pageId > 1) {
+			navigate(`/pokemons/${+pageId - 1}`);
 		}
 	};
 
 	const goToNextPage = () => {
-		setPage(page + 1);
+		if (+pageId < Math.ceil(TOTAL_POKEMONS / LIMIT)) {
+			navigate(`/pokemons/${+pageId + 1}`);
+		}
 	};
 
 	if (!isPower) {

@@ -19,7 +19,7 @@ function App() {
 						<Header />
 						<Routes>
 							<Route path="/" element={<Power />} />
-							<Route path="/pokemons" element={<Pokemons />} />
+							<Route path="/pokemons/:pageId" element={<Pokemons />} />
 							<Route path="/pokemon/:pokemonId" element={<Detail />} />
 							<Route path="/favorites" element={<Favorites />} />
 							<Route path="/*" element={<Pokemons />} />

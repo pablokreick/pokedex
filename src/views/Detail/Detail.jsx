@@ -19,6 +19,13 @@ const Detail = () => {
 		navigate(-1);
 	};
 
+	const previousPage = () => {
+		navigate(`/pokemon/${+pokemonId - 1}`, { replace: true });
+	};
+	const nextPage = () => {
+		navigate(`/pokemon/${+pokemonId + 1}`, { replace: true });
+	};
+
 	const handleClick = () => {
 		handleFavorites(pokemon);
 	};
@@ -48,7 +55,7 @@ const Detail = () => {
 					/>
 				)}
 			</Main>
-			<Pagination />
+			<Pagination previousPage={previousPage} nextPage={nextPage} />
 		</>
 	);
 };

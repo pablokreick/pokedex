@@ -14,7 +14,7 @@ const NavBar = () => {
 				<Button handleClick={handlePower} shape="circle">
 					<Power color="#ffffff" size={32} />
 				</Button>
-				<Button to="/pokemons" shape="circle" contain="image">
+				<Button to="/pokemons/1" shape="circle" contain="image">
 					<img src={Pokemons} alt="Pokemons" />
 				</Button>
 			</div>
