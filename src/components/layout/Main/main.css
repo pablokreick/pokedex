@@ -1,0 +1,19 @@
+.main {
+	background-color: #fff;
+	min-height: 561px;
+	width: 100%;
+	margin: auto;
+	border-radius: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 3rem;
+}
+
+.main--block {
+	display: block;
+}
+
+.main--dark {
+	background-color: #292b35;
+}

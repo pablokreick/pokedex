@@ -1,0 +1,16 @@
+.pagination {
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40vh;
+}
+
+@media screen and (min-width: 768px) {
+	.pagination {
+		height: 12vh;
+	}
+}
