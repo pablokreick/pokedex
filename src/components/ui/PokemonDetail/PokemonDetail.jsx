@@ -6,7 +6,7 @@ import PokemonProgress from "../PokemonProgress/PokemonProgress";
 import TypeBadge from "../TypeBadge/TypeBadge";
 import "./pokemonDetail.css";
 
-const PokemonDetail = ({ pokemon, handleBack }) => {
+const PokemonDetail = ({ pokemon, handleBack, handleClick, isInFavorites }) => {
 	return (
 		<div className="detail">
 			<div className="detail__image">
@@ -37,7 +37,11 @@ const PokemonDetail = ({ pokemon, handleBack }) => {
 					))}
 				</div>
 				<div className="button--detail">
-					<Button type="screen">Add to Favorites</Button>
+					<Button handleClick={handleClick} type="screen">
+						{isInFavorites(pokemon.id)
+							? "Remove from Favorites"
+							: "Add to Favorites"}
+					</Button>
 				</div>
 			</div>
 		</div>

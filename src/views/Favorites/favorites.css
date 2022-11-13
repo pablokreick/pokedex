@@ -1,0 +1,32 @@
+.right {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.favorite__table {
+	width: 90%;
+	margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+	.favorite__table {
+		width: 50%;
+	}
+}
+
+.no-image-container {
+	width: 50%;
+	height: 400px;
+	margin: auto;
+}
+
+.no-image-container img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.img__thumbnail {
+	width: 80px;
+}

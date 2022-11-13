@@ -18,7 +18,7 @@ const NavBar = () => {
 					<img src={Pokemons} alt="Pokemons" />
 				</Button>
 			</div>
-			<Button shape="circle">
+			<Button to="/favorites" shape="circle">
 				<HeartFill color="#ffffff" size={32} />
 			</Button>
 		</nav>
