@@ -5,15 +5,28 @@ import Pagination from "components/ui/Pagination/Pagination";
 import PokemonDetail from "components/ui/PokemonDetail/PokemonDetail";
 import usePokemon from "hooks/usePokemon";
 import { useParams, useNavigate, Navigate } from "react-router-dom";
+import { usePowerContext } from "contexts/PowerContext";
 
 const Detail = () => {
 	const { pokemonId } = useParams();
 	const { loading, pokemon } = usePokemon(pokemonId);
 	const navigate = useNavigate();
+	const { isPower } = usePowerContext();
 
 	const handleBack = () => {
 		navigate(-1);
 	};
+
+	if (!isPower) {
+		return (
+			<>
+				<Main classes="main-dark">
+					<Navigate to="/" />
+				</Main>
+				<Pagination />
+			</>
+		);
+	}
 
 	return (
 		<>
